@@ -15,9 +15,7 @@ tables = {
 	family_name varchar(255) default null,
 	date_of_birth DATE default null,
 	place_of_birth varchar(255) default null,
-    city_id int,
-    primary key(peoples_id),
-    constraint forkey_city foreign key(city_id) references city(city_id)
+    primary key(peoples_id)
     )
     """
 }
@@ -31,6 +29,6 @@ insert_tables = {
     """
 }
 main_query = """
-    select peoples_id, given_name, family_name, date_of_birth, place_of_birth
+    select peoples_id, given_name, family_name, CAST(date_of_birth AS CHAR) as date_of_birth, place_of_birth
     from peoples 
     """

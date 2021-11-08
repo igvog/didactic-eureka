@@ -25,3 +25,13 @@ Optional: if you want to connect to the MySQL database via the command-line clie
 ```
 docker-compose run database mysql --host=database --user=codetest --password=swordfish codetest
 ```
+
+### Running you code
+docker-compose run task
+
+### Cleaning up
+
+To tidy up, bringing down all the containers and deleting them.
+
+```
+docker-compose down

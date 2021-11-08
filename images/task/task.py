@@ -44,15 +44,25 @@ except IOError:
 cursor.execute(cfg.main_query)
 print("main query run")
 
+# Get data from database 
 main_data = cursor.fetchall()
 
 try:
     with open('/data/task_docker.json', 'w') as json_file:
         rows = {}
+        data = []
+        # Here is my mapping and add new column 
         for i in main_data:
-            query_row = {i[0] : i[1]}
-            rows.update(query_row)
-        json.dump(rows, json_file, separators=(',', ':'))
+            content = {'id': i[0], 
+                'given_name': i[1], 
+                'family_name': i[2], 
+                'date_of_birth': i[3], 
+                'place': i[4],
+                'fullname': i[1] + " " + i[2]}
+
+            data.append(content)
+            content = {}
+        json.dump(data, json_file, indent=4)
 except IOError:
     print("Error with output file")
 
