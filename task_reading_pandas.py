@@ -1,44 +1,34 @@
 import pandas as pd
-import csv
+import json
+import test_cases
 
-# test data file path, the fils is a csv file.
-test_data_file_path = '/home/samat/didactic-eureka/data/test_data.csv'
-# test data file object
-test_data_file_object = None
-# test data row list.
-test_data_row_list = list()
-# load test data from ./test_data.csv file.
-def load_test_data():
-    global test_data_file_object, test_data_row_list
-    # open test data csv file.
-    test_data_file_object = open(test_data_file_path, 'r')
-    # read the csv file and return the text line list.
-    csv_reader = csv.reader(test_data_file_object, delimiter=',')
-    for row in csv_reader:
-        test_data_row_list.append(row)
-    print('open and load data from test_data.csv complete.')
-# close and release the test data file object.
-def close_test_data_file():
-    global test_data_file_object
-    if test_data_file_object is not None:
-        test_data_file_object.close()
-        test_data_file_object = None
-        print('close file test_data.csv complete.')
+def reading_data_by_pandas(path: str):
+    print("reading csv file ...")
+    return pd.read_csv(path)
 
-load_test_data()
-close_test_data_file()
-# read file by using pandas
-df = pd.read_csv('/home/samat/didactic-eureka/data/people.csv')
+if __name__ == '__main__':
+    # run test case
+    test_cases.load_test_data()
+    test_cases.close_test_data_file()
 
-# change column names
-df = df.rename(columns={
-    "given_name": "Name", 
-    "family_name": "Surname",
-    "date_of_birth": "Date",
-    "place_of_birth": "Place"
+    # read file by using pandas
+    df = reading_data_by_pandas('/home/samat/didactic-eureka/data/people.csv')
+
+    # change column names Mapping task
+    df = df.rename(columns={
+        "given_name": "Name", 
+        "family_name": "Surname",
+        "date_of_birth": "Date",
+        "place_of_birth": "Place"
     })
+    print("Mapping data from csv to json done")
+    # add new column
+    df['Fullname'] = df['Name'] + " " + df['Surname']
 
-df['Fullname'] = df['Name'] + " " + df['Surname']
-
-# write file to path
-df.to_json ('/home/samat/didactic-eureka/data/task_pandas.json')
+    # write file to path
+    result = df.to_json(orient="records")
+    parsed = json.loads(result)
+    
+    with open('/home/samat/didactic-eureka/data/task_pandas.json', 'w', encoding='utf-8') as jsonf:
+        jsonf.write(json.dumps(parsed, indent=4))
+    print("Transform data from csv to json done")

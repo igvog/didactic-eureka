@@ -1,1 +1,65 @@
-{"Name":{"0":"John","1":"Grace","2":"Sean","3":"Lily","4":"Edith","5":"John","6":"Jose","7":"Leonard","8":"Christopher"},"Surname":{"0":"Williams","1":"Jeffery","2":"Molnar","3":"Doyle","4":"Styles","5":"Brown","6":"Barth","7":"Beetham","8":"Cash"},"Date":{"0":"1842-09-30","1":"1899-06-14","2":"1982-11-01","3":"1883-04-02","4":"1879-07-24","5":"1892-09-05","6":"1942-08-13","7":"1897-05-25","8":"1977-09-23"},"Place":{"0":"Dumfries","1":"Kelso","2":"Dromore","3":"Hamilton","4":"Ballymoney","5":"Kilmarnock","6":"Newtownards","7":"Enniskillen","8":"Stirling"},"Fullname":{"0":"John Williams","1":"Grace Jeffery","2":"Sean Molnar","3":"Lily Doyle","4":"Edith Styles","5":"John Brown","6":"Jose Barth","7":"Leonard Beetham","8":"Christopher Cash"}}
+[
+    {
+        "Name": "John",
+        "Surname": "Williams",
+        "Date": "1842-09-30",
+        "Place": "Dumfries",
+        "Fullname": "John Williams"
+    },
+    {
+        "Name": "Grace",
+        "Surname": "Jeffery",
+        "Date": "1899-06-14",
+        "Place": "Kelso",
+        "Fullname": "Grace Jeffery"
+    },
+    {
+        "Name": "Sean",
+        "Surname": "Molnar",
+        "Date": "1982-11-01",
+        "Place": "Dromore",
+        "Fullname": "Sean Molnar"
+    },
+    {
+        "Name": "Lily",
+        "Surname": "Doyle",
+        "Date": "1883-04-02",
+        "Place": "Hamilton",
+        "Fullname": "Lily Doyle"
+    },
+    {
+        "Name": "Edith",
+        "Surname": "Styles",
+        "Date": "1879-07-24",
+        "Place": "Ballymoney",
+        "Fullname": "Edith Styles"
+    },
+    {
+        "Name": "John",
+        "Surname": "Brown",
+        "Date": "1892-09-05",
+        "Place": "Kilmarnock",
+        "Fullname": "John Brown"
+    },
+    {
+        "Name": "Jose",
+        "Surname": "Barth",
+        "Date": "1942-08-13",
+        "Place": "Newtownards",
+        "Fullname": "Jose Barth"
+    },
+    {
+        "Name": "Leonard",
+        "Surname": "Beetham",
+        "Date": "1897-05-25",
+        "Place": "Enniskillen",
+        "Fullname": "Leonard Beetham"
+    },
+    {
+        "Name": "Christopher",
+        "Surname": "Cash",
+        "Date": "1977-09-23",
+        "Place": "Stirling",
+        "Fullname": "Christopher Cash"
+    }
+]
