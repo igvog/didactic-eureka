@@ -1,5 +1,17 @@
 # didactic-eureka
 
+
+### Simple version 
+task_reading.py
+
+### Pandas using version
+task_reading_pandas.py
+
+### test case file where you could test file and path
+test_cases.py
+
+
+### Docker task version
 ### Requirements
 
 Make sure you have recent versions of Docker and Docker Compose.

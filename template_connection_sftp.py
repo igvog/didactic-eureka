@@ -4,6 +4,8 @@ myHostname = "Ubuntu"
 myUsername = "samat"
 myPassword = "samat"
 
+localFilePath = '/home/samat'
+remoteFilePath = '/home/samat'
 with pysftp.Connection(host=myHostname, username=myUsername, password=myPassword) as sftp:
     print("Connection succesfully stablished ... ")
 
@@ -16,5 +18,7 @@ with pysftp.Connection(host=myHostname, username=myUsername, password=myPassword
     # Print data
     for attr in directory_structure:
         print(attr.filename, attr)
+    
+    sftp.put(localFilePath, remoteFilePath)
     
 # connection closed automatically at the end of the with-block

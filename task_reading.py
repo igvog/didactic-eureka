@@ -38,9 +38,10 @@ if __name__ == '__main__':
     csvFilePath = '/home/samat/didactic-eureka/data/people.csv'
     jsonFilePath = '/home/samat/didactic-eureka/data/task.json'
  
-    # Call the make_json function
+    # Call the csv_to_json_mapping function
     try:
         print("Starting read csv file")
         csv_to_json_mapping(csvFilePath, jsonFilePath)
+        print("Finished")
     except IOError:
         print("Error with peoples csv file")
