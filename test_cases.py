@@ -21,3 +21,4 @@ def close_test_data_file():
         test_data_file_object.close()
         test_data_file_object = None
         print('close file test_data.csv complete.')
+        print('Test Done')
