@@ -31,13 +31,15 @@ def csv_to_json_mapping(csvFilePath, jsonFilePath):
     print("Transformation done")
     
 if __name__ == '__main__':
-    test_cases.load_test_data()
-    test_cases.close_test_data_file()
 
     # Decide the two file paths according to your
     csvFilePath = '/home/samat/didactic-eureka/data/people.csv'
     jsonFilePath = '/home/samat/didactic-eureka/data/task.json'
- 
+
+    # unit test
+    test_cases.load_test_data(csvFilePath)
+    test_cases.close_test_data_file()
+
     # Call the csv_to_json_mapping function
     try:
         print("Starting read csv file")

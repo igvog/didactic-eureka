@@ -7,12 +7,13 @@ def reading_data_by_pandas(path: str):
     return pd.read_csv(path)
 
 if __name__ == '__main__':
+    csvFilePath = '/home/samat/didactic-eureka/data/people.csv'
     # run test case
-    test_cases.load_test_data()
+    test_cases.load_test_data(csvFilePath)
     test_cases.close_test_data_file()
 
     # read file by using pandas
-    df = reading_data_by_pandas('/home/samat/didactic-eureka/data/people.csv')
+    df = reading_data_by_pandas(csvFilePath)
 
     # change column names Mapping task
     df = df.rename(columns={

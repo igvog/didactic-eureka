@@ -1,13 +1,11 @@
 import csv
 
-# test data file path, the fils is a csv file.
-test_data_file_path = '/home/samat/didactic-eureka/data/test_data.csv'
 # test data file object
 test_data_file_object = None
 # test data row list.
 test_data_row_list = list()
 # load test data from ./test_data.csv file.
-def load_test_data():
+def load_test_data(test_data_file_path):
     global test_data_file_object, test_data_row_list
     # open test data csv file.
     test_data_file_object = open(test_data_file_path, 'r')
