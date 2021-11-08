@@ -32,5 +32,5 @@ insert_tables = {
 }
 main_query = """
     select peoples_id, given_name, family_name, date_of_birth, place_of_birth
-    from peoples
+    from peoples 
     """

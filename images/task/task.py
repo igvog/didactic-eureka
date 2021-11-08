@@ -41,14 +41,13 @@ try:
 except IOError:
     print("Error with peoples csv file")
 
-
 cursor.execute(cfg.main_query)
 print("main query run")
 
 main_data = cursor.fetchall()
 
 try:
-    with open('/data/task.json', 'w') as json_file:
+    with open('/data/task_docker.json', 'w') as json_file:
         rows = {}
         for i in main_data:
             query_row = {i[0] : i[1]}
