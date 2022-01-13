@@ -41,4 +41,4 @@ jobs:
     runs-on: samat
     steps:
       - name: Hello World
-        run: echo Samat
+        run: echo Sagit

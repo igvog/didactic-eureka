@@ -1,1 +1,1 @@
-print('Samat Hello from Github actions')
+print('Sagit Hello from Github actions')
