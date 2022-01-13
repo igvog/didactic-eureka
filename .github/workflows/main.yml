@@ -39,6 +39,6 @@ jobs:
           python3 hello.py
   prod:
     runs-on: samat
-      steps:
-        - name: Hello World
-          run: echo Samat
+    steps:
+      - name: Hello World
+        run: echo Samat
