@@ -36,3 +36,4 @@ jobs:
           echo test, and deploy your project.
           hostname
           pwd
+          python3 hello.py

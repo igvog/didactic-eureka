@@ -1,0 +1,1 @@
+print('Samat Hello from Github actions')
